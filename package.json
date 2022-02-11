@@ -1,0 +1,24 @@
+{
+  "name": "@the-chat/use-logs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "git://github.com/the-chat/use-logs",
+  "dependencies": {
+    "@the-chat/alert": "^1.0.1"
+  },
+  "devDependencies": {
+    "@the-chat/types": "^1.0.0",
+    "firebase": "^9.6.6",
+    "notistack": "^2.0.3"
+  },
+  "peerDependencies": {
+    "@mui/icons-material": "^5.4.1",
+    "@mui/material": "^5.4.1",
+    "@mui/styles": "^5.4.1",
+    "react": "^17.0.2"
+  }
+}
