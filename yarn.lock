@@ -716,10 +716,10 @@
     "@mui/styles" "^5.4.1"
     notistack "^2.0.3"
 
-"@the-chat/types@^1.0.1":
-  version "1.0.1"
-  resolved "https://npm.pkg.github.com/download/@the-chat/types/1.0.1/f1317793957ebfe4aff4ed6308a1e2d0d432c7c26936c7e7e726fe93834385c6#65ae466fc305d2597ccc661411d5d1786dc3d6e8"
-  integrity sha512-Z6TBJPXRkz89iX3ODgVBGWZgBBqO4DAtbAp+AuSa20I5z4A2Adljuqvz57rCbKfNA/XYbx2LyyNx7385Z1OaFA==
+"@the-chat/types@^1.0.2":
+  version "1.0.2"
+  resolved "https://npm.pkg.github.com/download/@the-chat/types/1.0.2/360db255aa3cdc34ee5161bb132980b84219d2b7e760932e98a53bacf3250769#caf071fb2aaa748185de3a9e2a024a42c9f000e9"
+  integrity sha512-zKsT0Bn8bsm+9E7m8FHXqOz+Affgh+PeFnvO+kc35ioH3Hm/5b+DU1tiYcMSR5/+OGC3VZh7dDUubyP/KNgGRg==
 
 "@types/long@^4.0.1":
   version "4.0.1"
