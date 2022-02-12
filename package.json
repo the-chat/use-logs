@@ -1,6 +1,6 @@
 {
   "name": "@the-chat/use-logs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "license": "MIT",
   "publishConfig": {
@@ -11,7 +11,7 @@
     "@the-chat/alert": "^1.0.9"
   },
   "devDependencies": {
-    "@the-chat/types": "^1.0.2",
+    "@the-chat/types": "^1.0.3",
     "firebase": "^9.6.6",
     "notistack": "^2.0.3",
     "react": "^17.0.2"
