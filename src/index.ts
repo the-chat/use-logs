@@ -1,6 +1,7 @@
 import {FirebaseError} from "@firebase/util"
 import useAlert from "@the-chat/alert"
 import {SetState} from "@the-chat/types"
+import {useTranslation} from "next-i18next"
 import {SnackbarKey, SnackbarMessage} from "notistack"
 
 export type HandleSuccess = (message: string) => () => void
@@ -18,14 +19,15 @@ export type UseLogsReturn = {
 export type SetWaiting = SetState<boolean>
 
 export type UseLogs = (
-  // setState most of the time
-  setWaiting: SetWaiting,
-  loadingMessage: SnackbarMessage,
-  handleErrorMessage: (errorMessage: string) => SnackbarMessage
+  /** setState most of the time */
+  setWaiting: SetWaiting
 ) => UseLogsReturn
 
 // learn: factory?
-const useLogs: UseLogs = (setWaiting, loadingMessage, handleErrorMessage) => {
+/** uses "fallbacks" namespace
+ *  and 2 keys: "loading" key and "error" key with "errorMessage" var */
+const useLogs: UseLogs = (setWaiting) => {
+  const {t} = useTranslation("fallbacks")
   const {closeSnackbar, enqueueSnackbar} = useAlert()
 
   let key: SnackbarKey = null
@@ -33,7 +35,7 @@ const useLogs: UseLogs = (setWaiting, loadingMessage, handleErrorMessage) => {
   const loading: Loading = () => {
     setWaiting(true)
 
-    key = enqueueSnackbar(loadingMessage, {
+    key = enqueueSnackbar(t("loading"), {
       variant: "info",
       persist: true,
     })
@@ -57,10 +59,11 @@ const useLogs: UseLogs = (setWaiting, loadingMessage, handleErrorMessage) => {
       // kinda hacky, maybe there is better solution
       // todo: error.code not translatable
       // test
-      handleErrorMessage(
-        customMessage ||
-          (error instanceof FirebaseError ? error.code : error?.message)
-      ),
+      t("error", {
+        errorMessage:
+          customMessage ||
+          (error instanceof FirebaseError ? error.code : error?.message),
+      }),
       {variant: "error"}
     )
   }
