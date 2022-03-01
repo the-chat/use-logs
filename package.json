@@ -6,9 +6,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "repository": "git://github.com/the-chat/use-logs",
   "dependencies": {
     "@the-chat/alert": "^1.0.9"
