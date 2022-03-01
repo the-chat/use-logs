@@ -704,7 +704,7 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@the-chat/alert@^1.0.9":
+"@the-chat/alert@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@the-chat/alert/-/alert-1.1.0.tgz#271237701c2731ca84f978512e93e62f2e4c922d"
   integrity sha512-yTPefpT2cXn3MUiATeGxUoB3ZtRd2LlbWkAuVSrxgeIg0xZ35vK6wgaczGkVsatggXsM2t1rEHmteYbxLXBv5A==

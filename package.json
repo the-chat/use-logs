@@ -1,6 +1,6 @@
 {
   "name": "@the-chat/use-logs",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "dist/index.js",
   "license": "MIT",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "repository": "git://github.com/the-chat/use-logs",
   "dependencies": {
-    "@the-chat/alert": "^1.0.9",
+    "@the-chat/alert": "^1.1.0",
     "next-i18next": "^10.4.0"
   },
   "devDependencies": {
