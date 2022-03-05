@@ -30,7 +30,7 @@ const useLogs: UseLogs = (setWaiting) => {
   const { t } = useTranslation("fallbacks")
   const { closeSnackbar, enqueueSnackbar } = useAlert()
 
-  let key: SnackbarKey = null
+  let key: SnackbarKey | undefined
 
   const loading: Loading = () => {
     setWaiting(true)
