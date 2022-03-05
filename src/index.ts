@@ -1,8 +1,8 @@
-import {FirebaseError} from "@firebase/util"
+import { FirebaseError } from "@firebase/util"
 import useAlert from "@the-chat/alert"
-import {SetState} from "@the-chat/types"
-import {useTranslation} from "next-i18next"
-import {SnackbarKey, SnackbarMessage} from "notistack"
+import { SetState } from "@the-chat/types"
+import { useTranslation } from "next-i18next"
+import { SnackbarKey, SnackbarMessage } from "notistack"
 
 export type HandleSuccess = (message: string) => () => void
 export type HandleError = (
@@ -27,8 +27,8 @@ export type UseLogs = (
 /** uses "fallbacks" namespace
  *  and 2 keys: "loading" key and "error" key with "errorMessage" var */
 const useLogs: UseLogs = (setWaiting) => {
-  const {t} = useTranslation("fallbacks")
-  const {closeSnackbar, enqueueSnackbar} = useAlert()
+  const { t } = useTranslation("fallbacks")
+  const { closeSnackbar, enqueueSnackbar } = useAlert()
 
   let key: SnackbarKey = null
 
@@ -45,7 +45,7 @@ const useLogs: UseLogs = (setWaiting) => {
   const handleSuccess: HandleSuccess = (message) => () => {
     setWaiting(false)
     closeSnackbar(key)
-    enqueueSnackbar(message, {variant: "success"})
+    enqueueSnackbar(message, { variant: "success" })
   }
 
   // .catch
@@ -64,7 +64,7 @@ const useLogs: UseLogs = (setWaiting) => {
           customMessage ||
           (error instanceof FirebaseError ? error.code : error?.message),
       }),
-      {variant: "error"}
+      { variant: "error" }
     )
   }
 
