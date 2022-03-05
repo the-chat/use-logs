@@ -11,11 +11,11 @@
     "prepublish": "rm -rf dist&&tsc"
   },
   "dependencies": {
-    "@the-chat/alert": "^1.1.0",
+    "@the-chat/alert": "^1.1.1",
     "next-i18next": "^10.4.0"
   },
   "devDependencies": {
-    "@the-chat/types": "^1.0.4",
+    "@the-chat/types": "^1.0.6",
     "firebase": "^9.6.6",
     "notistack": "^2.0.3",
     "react": "^17.0.2"
