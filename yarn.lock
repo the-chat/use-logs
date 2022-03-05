@@ -704,10 +704,10 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@the-chat/alert@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@the-chat/alert/-/alert-1.1.0.tgz#271237701c2731ca84f978512e93e62f2e4c922d"
-  integrity sha512-yTPefpT2cXn3MUiATeGxUoB3ZtRd2LlbWkAuVSrxgeIg0xZ35vK6wgaczGkVsatggXsM2t1rEHmteYbxLXBv5A==
+"@the-chat/alert@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@the-chat/alert/-/alert-1.1.1.tgz#b1d87b0511680ab63153dab7bad60f10579acb58"
+  integrity sha512-2j8eq7FnclwQBgXZ5JYhc3/qEvlh4tV9842gqni6kmybwYuavcMRomTIYqyeFAFnh7NwQBYlwLdLn2P1ochrmQ==
   dependencies:
     "@emotion/react" "^11.7.1"
     "@emotion/styled" "^11.6.0"
@@ -716,10 +716,10 @@
     "@mui/styles" "^5.4.1"
     notistack "^2.0.3"
 
-"@the-chat/types@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@the-chat/types/-/types-1.0.4.tgz#46497a016024398743790fdf8ab2a8b5ee88aff7"
-  integrity sha512-x0HiDo0t2hoHaxY7iM5zMxHxG+6fGBxo/IiZve0wjhqCW08gkprU4np0LJDLugs9/4YunLi6EoP3OB7BBCHVTA==
+"@the-chat/types@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@the-chat/types/-/types-1.0.6.tgz#1252ef8c4e084e46b04aacef44cf879b41a492e5"
+  integrity sha512-rAhFXhSZO3Co/tgfnhm/gs3ceW1pzEnHw2HecdAWdIKOU3vNH4TeEo1Gs0aLZy9Cy96bblK+elX+Q4Dq/ijSQQ==
 
 "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.1"
