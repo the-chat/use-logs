@@ -4,7 +4,7 @@ import { SetState } from "@the-chat/types"
 import { useTranslation } from "next-i18next"
 import { SnackbarKey, SnackbarMessage } from "notistack"
 
-export type HandleSuccess = (message: string) => () => void
+export type HandleSuccess = (message: SnackbarMessage) => () => void
 export type HandleError = (
   customMessage?: string
 ) => (error?: FirebaseError | Error) => void
