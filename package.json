@@ -7,6 +7,9 @@
     "dist"
   ],
   "repository": "git://github.com/the-chat/use-logs",
+  "scripts": {
+    "prepublish": "rm -rf dist&&tsc"
+  },
   "dependencies": {
     "@the-chat/alert": "^1.1.0",
     "next-i18next": "^10.4.0"
