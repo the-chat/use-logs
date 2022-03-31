@@ -15,7 +15,7 @@
     "next-i18next": "^10.4.0"
   },
   "devDependencies": {
-    "@the-chat/types": "^1.0.6",
+    "@the-chat/types": "^1.0.7",
     "firebase": "^9.6.6",
     "notistack": "^2.0.3",
     "react": "^17.0.2"

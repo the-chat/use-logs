@@ -716,10 +716,10 @@
     "@mui/styles" "^5.4.1"
     notistack "^2.0.3"
 
-"@the-chat/types@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@the-chat/types/-/types-1.0.6.tgz#1252ef8c4e084e46b04aacef44cf879b41a492e5"
-  integrity sha512-rAhFXhSZO3Co/tgfnhm/gs3ceW1pzEnHw2HecdAWdIKOU3vNH4TeEo1Gs0aLZy9Cy96bblK+elX+Q4Dq/ijSQQ==
+"@the-chat/types@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@the-chat/types/-/types-1.0.7.tgz#be0dc1e6104d76d6160a52a85f9e31e86072b0c8"
+  integrity sha512-rsat/zaUwukk7ZY6XYCCTTBHaqTJwV/11wbZvFlfynwmgKMQMLTf4SvfOpwVI2Plj7MPHpMu3/4GvbOWAWj22g==
 
 "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.1"
