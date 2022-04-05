@@ -24,6 +24,7 @@ export type UseLogs = (
 ) => UseLogsReturn
 
 // learn: factory?
+// todo?: too much things to do in one hook?
 /** uses "fallbacks" namespace
  *  and 2 keys: "loading" key and "error" key with "errorMessage" var */
 const useLogs: UseLogs = (setWaiting) => {
