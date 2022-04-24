@@ -3,6 +3,7 @@ import useAlert from "@the-chat/alert"
 import { SetState } from "@the-chat/types"
 import { useTranslation } from "next-i18next"
 import { SnackbarKey, SnackbarMessage } from "notistack"
+import { useState } from "react"
 
 export type HandleSuccess = (message: SnackbarMessage) => () => void
 export type HandleError = (
@@ -20,7 +21,7 @@ export type SetWaiting = SetState<boolean>
 
 export type UseLogs = (
   /** setState most of the time */
-  setWaiting: SetWaiting
+  setWaiting?: SetWaiting
 ) => UseLogsReturn
 
 // learn: factory?
@@ -34,7 +35,7 @@ const useLogs: UseLogs = (setWaiting) => {
   let key: SnackbarKey | undefined
 
   const loading: Loading = () => {
-    setWaiting(true)
+    setWaiting && setWaiting(true)
 
     key = enqueueSnackbar(t("loading"), {
       variant: "info",
@@ -44,7 +45,8 @@ const useLogs: UseLogs = (setWaiting) => {
 
   // .then
   const handleSuccess: HandleSuccess = (message) => () => {
-    setWaiting(false)
+    setWaiting && setWaiting(false)
+
     closeSnackbar(key)
     enqueueSnackbar(message, { variant: "success" })
   }
@@ -52,10 +54,11 @@ const useLogs: UseLogs = (setWaiting) => {
   // .catch
   // now mostly for firebase
   const handleError: HandleError = (customMessage) => (error) => {
+    setWaiting && setWaiting(false)
+
     // todo long time: send error with user data to server
     console.dir(error)
     closeSnackbar(key)
-    setWaiting(false)
     enqueueSnackbar(
       // kinda hacky, maybe there is better solution
       // todo: error.code not translatable
@@ -74,6 +77,12 @@ const useLogs: UseLogs = (setWaiting) => {
     handleSuccess,
     handleError,
   }
+}
+
+export const useStateLogs = (): [UseLogsReturn, boolean] => {
+  const [waiting, setWaiting] = useState(false)
+
+  return [useLogs(setWaiting), waiting]
 }
 
 export default useLogs
